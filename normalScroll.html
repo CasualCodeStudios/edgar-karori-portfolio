@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edgar Karori | Physiotherapist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalScroll.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+
+<!-- NOISE OVERLAY -->
+<div class="noise-overlay"></div>
+
+<!-- NAVIGATION -->
+<header class="mainHeader" id="mainHeader">
+  <a href="#" class="logo-link">
+    <div class="logo">
+      <img src="healerPicLogo.png" alt="Edgar Karori Logo">
+    </div>
+  </a>
+  <nav class="navs">
+    <a href="#" data-nav>Home</a>
+    <a href="#services" data-nav>Services</a>
+    <a href="#aboutMe" data-nav>About</a>
+    <a href="#testimonials" data-nav>Testimonials</a>
+    <a href="#contact" data-nav>Contact</a>
+  </nav>
+  <div class="menu" onclick="toggleSidebar()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</header>
+
+<!-- SIDEBAR -->
+<div class="sidebar-overlay" onclick="closeSidebar()"></div>
+<aside class="sidebar" id="sidebar">
+  <button class="sidebar-close" onclick="closeSidebar()">✕</button>
+  <div class="sidebar-navs">
+    <a href="#" onclick="closeSidebar()">Home</a>
+    <a href="#services" onclick="closeSidebar()">Services</a>
+    <a href="#aboutMe" onclick="closeSidebar()">About Me</a>
+    <a href="#testimonials" onclick="closeSidebar()">Testimonials</a>
+    <a href="#contact" onclick="closeSidebar()">Contact</a>
+  </div>
+  <div class="sidebar-footer">
+    <p>Edgar Karori</p>
+    <span>Physiotherapist · Nairobi, Kenya</span>
+  </div>
+</aside>
+
+<!-- ======= HERO ======= -->
+<section class="panel panel1" id="home">
+  <div class="hero-bg-text">PHYSIO</div>
+
+  <div class="heroSection">
+    <!-- TEXT -->
+    <div class="hero-text-col reveal-left">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        <span>Available for Consultation</span>
+      </div>
+      <h1 class="heroH1">
+        <span class="hero-italic">Meet Your</span><br>
+        Physiotherapist
+      </h1>
+      <p class="hero-tagline">
+        Helping you move better, recover faster, and live stronger — one session at a time.
+      </p>
+      <div class="typing-row">
+        <span class="type-label">I am</span>
+        <span id="typing" class="type"></span>
+        <span class="type-cursor">|</span>
+      </div>
+      <div class="hero-cta">
+        <button class="btn-primary bookBtn" onclick="openModal()">Book Appointment</button>
+        <a class="btn-ghost" href="#services">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">1+</span><span class="stat-label">Years Exp.</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Patients</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Satisfaction</span></div>
+      </div>
+    </div>
+
+    <!-- IMAGES -->
+    <div class="heroImages reveal-right">
+      <div class="img-frame img-main">
+        <img src="streetz.jpg" alt="Edgar Karori">
+        <div class="img-badge">BSc. Physiotherapy</div>
+      </div>
+      <div class="img-frame img-secondary">
+        <img src="healerPic.jpg" alt="Edgar in action">
+      </div>
+      <div class="hero-float-card">
+        <div class="float-icon"><img src="medal.png" alt="medal Icon"></div>
+        <div>
+          <p class="float-title">Certified Physio</p>
+          <p class="float-sub">Kenya Medical Board</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL HINT -->
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ======= SERVICES ======= -->
+<section class="panel panel2" id="services">
+  <div class="section-header reveal-up">
+    <span class="section-tag">What I Offer</span>
+    <h2>Services <em>Tailored</em><br>For You</h2>
+    <p class="section-sub">"Personalized treatment plans to help you recover safely and effectively after injury."</p>
+  </div>
+
+  <div class="serviceCards">
+    <div class="service-card reveal-card" data-delay="0">
+      <div class="card-number">01</div>
+      <div class="card-icon"><img src="pain.png" alt="knee hurts"></div>
+      <h3>Sports Physio</h3>
+      <p>Expert rehabilitation for athletes — from sprain management to performance recovery, getting you back on the field stronger than before.</p>
+      <div class="card-hover-line"></div>
+    </div>
+    <div class="service-card reveal-card" data-delay="100">
+      <div class="card-number">02</div>
+      <div class="card-icon"><img src="physical-therapy.png" alt="Physical Therapy"></div>
+      <h3>Musculoskeletal Rehab</h3>
+      <p>Targeted therapy for joint, muscle, and bone conditions. Restoring function and eliminating pain through evidence-based methods.</p>
+      <div class="card-hover-line"></div>
+    </div>
+    <div class="service-card reveal-card" data-delay="200">
+      <div class="card-number">03</div>
+      <div class="card-icon"><img src="cardiology.png" alt="cardio icon"></div>
+      <h3>Cardiopulmonary Rehab</h3>
+      <p>Specialized programs for heart and lung recovery. Improving endurance, breathing capacity, and cardiovascular health.</p>
+      <div class="card-hover-line"></div>
+    </div>
+    <div class="service-card reveal-card" data-delay="300">
+      <div class="card-number">04</div>
+      <div class="card-icon"><img src="consulting.png" alt="from home"></div>
+      <h3>Home Visits / Telehealth</h3>
+      <p>Quality physiotherapy from the comfort of your home. In-person house calls or virtual consultations — care wherever you are.</p>
+      <div class="card-hover-line"></div>
+    </div>
+  </div>
+
+  <div class="services-cta reveal-up">
+    <button class="btn-primary bookBtn" onclick="openModal()">Book an Appointment →</button>
+  </div>
+</section>
+
+<!-- ======= ABOUT ======= -->
+<section class="panel panel3" id="aboutMe">
+  <div class="section-header reveal-up">
+    <span class="section-tag">The Person Behind It</span>
+    <h2>About <em>Your</em> Therapist</h2>
+  </div>
+
+  <div class="aboutWrapper">
+    <div class="about-row reveal-left">
+      <div class="about-img-wrap">
+        <img src="grad (1).jpg" alt="Edgar graduating">
+        <div class="about-img-label">Class of 2025</div>
+      </div>
+      <div class="abtContainer">
+        <span class="section-tag">Professional Life</span>
+        <h3>The Healer</h3>
+        <p>Edgar Karori is a licensed physiotherapist with a passion for sports rehabilitation and functional recovery. Trained at a top institution and registered with the Kenya Medical Board, he combines clinical precision with a patient-first approach to ensure every individual gets back to doing what they love.</p>
+      </div>
+    </div>
+
+    <div class="about-row reverse reveal-right">
+      <div class="abtContainer">
+        <span class="section-tag">Beyond the Clinic</span>
+        <h3>The Person</h3>
+        <p>Off the clock, Edgar is a proud rugby player, a Gen-Z with the energy of a whole team, and a deeply patriotic Kenyan. He believes that understanding life beyond the clinic makes him a better therapist — because healing is as much about the mind and spirit as the body.</p>
+      </div>
+      <div class="about-img-wrap">
+        <img src="pooling.jpg" alt="Edgar casual">
+        <div class="about-img-label">Life Outside</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= TESTIMONIALS ======= -->
+<section class="panel panel4" id="testimonials">
+  <div class="section-header reveal-up">
+    <span class="section-tag">Client Stories</span>
+    <h2>What They <em>Say</em></h2>
+  </div>
+
+  <div class="testimonials-grid">
+    <div class="testi-card featured reveal-card" data-delay="0">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">After my ACL tear, I thought my rugby days were over. Edgar had me back on the pitch in 4 months. His approach was methodical, encouraging, and deeply professional.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">JM</div>
+        <div>
+          <p class="testi-name">Jemo</p>
+          <p class="testi-role">Rugby Player · Nairobi RFC</p>
+        </div>
+        <div class="testi-stars">★★★★</div>
+      </div>
+    </div>
+    <div class="testi-card reveal-card" data-delay="150">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">The telehealth sessions were so convenient. I recovered from my back surgery while staying at home in Nyeri. Truly world-class service.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">GW</div>
+        <div>
+          <p class="testi-name">Gracy</p>
+          <p class="testi-role">Post-op Recovery Patient</p>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+    <div class="testi-card reveal-card" data-delay="300">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">My shoulder impingement had plagued me for two years. In 6 sessions, I was pain-free. Edgar's knowledge of musculoskeletal rehab is exceptional.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">BK</div>
+        <div>
+          <p class="testi-name">Yobra</p>
+          <p class="testi-role">Yoga & Gym Enthusiast</p>
+        </div>
+        <div class="testi-stars">★★★★</div>
+      </div>
+    </div>
+    <div class="testi-card reveal-card" data-delay="450">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">As a cardiac rehab patient, I needed someone I could trust. Edgar's calm demeanor and evidence-based approach made all the difference in my recovery.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">MM</div>
+        <div>
+          <p class="testi-name">Maggy</p>
+          <p class="testi-role">Cardiac Rehab Patient</p>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= APPOINTMENT MODAL ======= -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal-panel" id="modalPanel">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-inner">
+      <div class="modal-left">
+        <span class="section-tag">Ready to Heal?</span>
+        <h2>Book Your <em>Session</em></h2>
+        <p>Fill in the form and Edgar will get back to you within 24 hours to confirm your appointment and discuss your needs.</p>
+        <div class="modal-info-list">
+          <div class="modal-info-item"><img src="location.png" alt="location"> <span>Nairobi, Kenya (Home visits available)</span></div>
+          <div class="modal-info-item"><img src="phone-call.png" alt="phone icon"> <span>+254 700 000 000</span></div>
+          <div class="modal-info-item"><img src="clock (1).png" alt="clock icon"> <span>Mon–Sat, 8am – 6pm</span></div>
+          <div class="modal-info-item"><img src="feedback.png" alt="feeback icon"> <span>Response within 24 hours</span></div>
+        </div>
+      </div>
+      <div class="modal-right">
+        <div class="form-wrap">
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Your Details</legend>
+            <div class="form-group half">
+              <input type="text" id="fname" placeholder=" " required>
+              <label for="fname">First Name</label>
+            </div>
+            <div class="form-group half">
+              <input type="text" id="lname" placeholder=" " required>
+              <label for="lname">Last Name</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Contact Info</legend>
+            <div class="form-group">
+              <input type="email" id="email" placeholder=" " required>
+              <label for="email">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder=" " required>
+              <label for="phone">Phone Number</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend class="form-legend">Appointment Info</legend>
+            <div class="form-group">
+              <select id="service" required>
+                <option value="" disabled selected></option>
+                <option>Sports Physiotherapy</option>
+                <option>Musculoskeletal Rehab</option>
+                <option>Cardiopulmonary Rehab</option>
+                <option>Home Visit</option>
+                <option>Telehealth / Virtual</option>
+              </select>
+              <label for="service" class="select-label">Service Needed</label>
+            </div>
+            <div class="form-group half">
+              <input type="date" id="date" placeholder=" " required>
+              <label for="date">Preferred Date</label>
+            </div>
+            <div class="form-group half">
+              <select id="time" required>
+                <option value="" disabled selected></option>
+                <option>8:00 AM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+              </select>
+              <label for="time" class="select-label">Preferred Time</label>
+            </div>
+            <div class="form-group full">
+              <textarea id="notes" rows="3" placeholder=" "></textarea>
+              <label for="notes">Notes / Symptoms (optional)</label>
+            </div>
+          </fieldset>
+
+          <button class="btn-primary submit-btn" type="button" onclick="submitForm()">
+            Confirm Appointment →
+          </button>
+          <p class="form-disclaimer">Your information is private and secure. We'll never share your details.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======= FOOTER ======= -->
+<footer id="contact">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h2>Eddie's<br><em>PhysioCare</em></h2>
+      <p>Helping Kenya move better, recover faster, and live pain-free.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-link"><img src="linkedin.png" alt="linkedin icon"></a>
+        <a href="#" class="social-link"><img src="twitter.png" alt="twitter icon"></a>
+        <a href="#" class="social-link"><img src="instagram.png" alt="instagram pics"></a>
+        <a href="#" class="social-link"><img src="youtube.png" alt="youtube icon"></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#aboutMe">About</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Sports Physio</a></li>
+        <li><a href="#">Musculoskeletal</a></li>
+        <li><a href="#">Cardiopulmonary</a></li>
+        <li><a href="#">Home Visits</a></li>
+      </ul>
+    </div>
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Subscribe for health tips and updates.</p>
+      <div class="newsletter-row">
+        <input type="email" placeholder="your@email.com">
+        <button>→</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Eddie's PhysioCare. All rights reserved. By <a href="http://casualcodestudios.vercel.app/" target="_blank" rel="noopener noreferrer">Casual _code_ Studios</a></span>
+    <span>Nairobi, Kenya</span>
+  </div>
+</footer>
+
+<script src="normal.js"></script>
+<script>
+  // Sidebar
+  function toggleSidebar() {
+    document.getElementById('sidebar').classList.toggle('open');
+    document.querySelector('.sidebar-overlay').classList.toggle('open');
+    document.body.classList.toggle('no-scroll');
+  }
+  function closeSidebar() {
+    document.getElementById('sidebar').classList.remove('open');
+    document.querySelector('.sidebar-overlay').classList.remove('open');
+    document.body.classList.remove('no-scroll');
+  }
+
+  // Modal
+  function openModal() {
+    const overlay = document.getElementById('modalOverlay');
+    const panel = document.getElementById('modalPanel');
+    overlay.classList.add('open');
+    document.body.classList.add('no-scroll');
+    setTimeout(() => panel.classList.add('visible'), 10);
+  }
+  function closeModal() {
+    const overlay = document.getElementById('modalOverlay');
+    const panel = document.getElementById('modalPanel');
+    panel.classList.remove('visible');
+    setTimeout(() => { overlay.classList.remove('open'); document.body.classList.remove('no-scroll'); }, 400);
+  }
+  function handleOverlayClick(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  // Form submit
+  function submitForm() {
+    const btn = document.querySelector('.submit-btn');
+    btn.textContent = '✓ Request Sent!';
+    btn.style.background = '#38bdf8';
+    setTimeout(() => { closeModal(); btn.textContent = 'Confirm Appointment →'; btn.style.background = ''; }, 2500);
+  }
+
+  // Header scroll
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('mainHeader');
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // GSAP Scroll Animations
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.querySelectorAll('.reveal-up').forEach(el => {
+    gsap.from(el, { y: 60, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 85%' } });
+  });
+  document.querySelectorAll('.reveal-left').forEach(el => {
+    gsap.from(el, { x: -80, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } });
+  });
+  document.querySelectorAll('.reveal-right').forEach(el => {
+    gsap.from(el, { x: 80, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 80%' } });
+  });
+  document.querySelectorAll('.reveal-card').forEach(el => {
+    const delay = parseInt(el.dataset.delay || 0) / 1000;
+    gsap.from(el, { y: 50, opacity: 0, duration: 0.9, delay, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } });
+  });
+
+  // Stats counter
+  document.querySelectorAll('.stat-num').forEach(el => {
+  const originalText = el.textContent;
+  const target = parseInt(originalText);
+
+  // Extract suffix once
+  const suffix = originalText.includes('+')
+    ? '+'
+    : originalText.includes('%')
+    ? '%'
+    : '';
+
+  const obj = { val: 0 };
+
+  gsap.to(obj, {
+    val: target,
+    duration: 2,
+    ease: 'power2.out',
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 90%',
+    },
+    onUpdate: function () {
+      el.textContent = Math.round(obj.val) + suffix;
+    }
+  });
+});
+
+</script>
+</body>
+</html>
